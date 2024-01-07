@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_ID = 1
 
 # Application definition
 
@@ -38,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'taggit',
+    # 'django.contrib.sites',
+    # 'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +127,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_HOST = 'smtp.magic-net.ru'
+EMAIL_HOST_USER = 'alex'
+EMAIL_HOST_PASSWORD = 'Federal29'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = False
